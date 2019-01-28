@@ -1,0 +1,23 @@
+server:
+
+  port: 8082
+
+test:
+
+  clients:
+
+    default:
+
+      database: <%= database_name || app_name %>_test
+
+      hosts:
+
+        - localhost:27017
+
+      options:
+
+        read:
+
+          mode: :primary
+
+max_pool_size: 1
